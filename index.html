@@ -15,7 +15,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/styles.css" />
-    <title>Studio</title>
+    <title>WebStudio</title>
   </head>
 
   <body>
@@ -27,7 +27,7 @@
         <nav class="header__nav-bar">
           <ul>
             <li class="li--horizontal header__li--padding-right">
-              <a href="./" class="header__link">Agencja</a>
+              <a href="./" class="header__link header__link--active">Agencja</a>
             </li>
             <li class="li--horizontal header__li--padding-right">
               <a href="./portfolio.html" class="header__link">Portfolio</a>
@@ -65,7 +65,18 @@
             EFEKTYWNE ROZWIĄZANIA<br />
             DLA WASZEGO BIZNESU
           </h1>
-          <button class="order__btn" type="button">Zamów usługę</button>
+          <button data-modal-open class="order__btn" type="button">
+            Zamów usługę
+          </button>
+          <div data-modal class="backdrop is-hidden">
+            <div class="modal">
+              <button data-modal-close class="btn-close">
+                <svg class="btn-close__icon">
+                  <use href="./images/sprite.svg#btn-close"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -129,28 +140,41 @@
           <h2 class="what-we-do__h2">Czym się zajmujemy</h2>
           <ul>
             <li class="li--horizontal what-we-do__li--margin-right">
-              <img
-                src="./images/img_1.jpg"
-                alt="Wpisywanie kodu"
-                height="294"
-                width="370"
-              />
+              <div class="what-we-do__item">
+                <img
+                  src="./images/img_1.jpg"
+                  alt="Dobieranie palety kolorów"
+                  height="294"
+                  width="370"
+                />
+                <p class="what-we-do__item-description">
+                  Aplikacje komputerowe
+                </p>
+              </div>
             </li>
             <li class="li--horizontal what-we-do__li--margin-right">
-              <img
-                src="./images/img_2.jpg"
-                alt="Projektowanie interfejsu aplikacji mobilnej"
-                height="294"
-                width="370"
-              />
+              <div class="what-we-do__item">
+                <img
+                  src="./images/img_2.jpg"
+                  alt="Projektowanie interfejsu aplikacji mobilnej"
+                  height="294"
+                  width="370"
+                />
+                <p class="what-we-do__item-description">Aplikacje mobilne</p>
+              </div>
             </li>
             <li class="li--horizontal">
-              <img
-                src="./images/img_3.jpg"
-                alt="Dobieranie palety kolorów"
-                height="294"
-                width="370"
-              />
+              <div class="what-we-do__item">
+                <img
+                  src="./images/img_3.jpg"
+                  alt="Dobieranie palety kolorów"
+                  height="294"
+                  width="370"
+                />
+                <p class="what-we-do__item-description">
+                  Rozwiązania graficzne
+                </p>
+              </div>
             </li>
           </ul>
         </div>
@@ -519,5 +543,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
